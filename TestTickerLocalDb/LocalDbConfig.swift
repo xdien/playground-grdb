@@ -27,7 +27,7 @@ public struct LocalDbConfig {
             let databaseURL = directoryURL.appendingPathComponent(kDefaultSQLiteName)
             sqlitePath = databaseURL.path
 
-            Logger.default.info("Database initialized at \(databaseURL.path)")
+            print("Database initialized at \(databaseURL.path)")
         } catch {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate.

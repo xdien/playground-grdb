@@ -19,6 +19,7 @@
 		85837E462B07195D00111CAC /* LocalDbConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E452B07195D00111CAC /* LocalDbConfig.swift */; };
 		85837E482B07198B00111CAC /* LocalDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E472B07198B00111CAC /* LocalDbManager.swift */; };
 		85837E4A2B0719DA00111CAC /* migrations_v001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E492B0719DA00111CAC /* migrations_v001.swift */; };
+		85837E4C2B07420E00111CAC /* AuthorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E4B2B07420E00111CAC /* AuthorInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		85837E452B07195D00111CAC /* LocalDbConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbConfig.swift; sourceTree = "<group>"; };
 		85837E472B07198B00111CAC /* LocalDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbManager.swift; sourceTree = "<group>"; };
 		85837E492B0719DA00111CAC /* migrations_v001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = migrations_v001.swift; sourceTree = "<group>"; };
+		85837E4B2B07420E00111CAC /* AuthorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorInfo.swift; sourceTree = "<group>"; };
 		CF45A6C7D8EC24CD29609D2B /* Pods-TestTickerLocalDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTickerLocalDb.release.xcconfig"; path = "Target Support Files/Pods-TestTickerLocalDb/Pods-TestTickerLocalDb.release.xcconfig"; sourceTree = "<group>"; };
 		FA6FD228176A06D0D5FF84C6 /* Pods-TestTickerLocalDb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTickerLocalDb.debug.xcconfig"; path = "Target Support Files/Pods-TestTickerLocalDb/Pods-TestTickerLocalDb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				85837E412B0718F400111CAC /* Author.swift */,
 				85837E432B07190F00111CAC /* Book.swift */,
+				85837E4B2B07420E00111CAC /* AuthorInfo.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				85837E422B0718F400111CAC /* Author.swift in Sources */,
 				85837E442B07190F00111CAC /* Book.swift in Sources */,
 				85837E482B07198B00111CAC /* LocalDbManager.swift in Sources */,
+				85837E4C2B07420E00111CAC /* AuthorInfo.swift in Sources */,
 				85566BCF2B0717D80079CE70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
