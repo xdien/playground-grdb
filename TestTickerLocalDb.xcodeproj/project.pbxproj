@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9E8562B1243E0BDA778C7A /* libPods-TestTickerLocalDb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407E423B2A5E0AD33F175726 /* libPods-TestTickerLocalDb.a */; };
 		85566BCD2B0717D80079CE70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85566BCC2B0717D80079CE70 /* AppDelegate.swift */; };
 		85566BCF2B0717D80079CE70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85566BCE2B0717D80079CE70 /* SceneDelegate.swift */; };
 		85566BD12B0717D80079CE70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85566BD02B0717D80079CE70 /* ViewController.swift */; };
 		85566BD42B0717D80079CE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85566BD22B0717D80079CE70 /* Main.storyboard */; };
 		85566BD62B0717DA0079CE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85566BD52B0717DA0079CE70 /* Assets.xcassets */; };
 		85566BD92B0717DA0079CE70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85566BD72B0717DA0079CE70 /* LaunchScreen.storyboard */; };
+		85837E422B0718F400111CAC /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E412B0718F400111CAC /* Author.swift */; };
+		85837E442B07190F00111CAC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E432B07190F00111CAC /* Book.swift */; };
+		85837E462B07195D00111CAC /* LocalDbConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E452B07195D00111CAC /* LocalDbConfig.swift */; };
+		85837E482B07198B00111CAC /* LocalDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E472B07198B00111CAC /* LocalDbManager.swift */; };
+		85837E4A2B0719DA00111CAC /* migrations_v001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85837E492B0719DA00111CAC /* migrations_v001.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		407E423B2A5E0AD33F175726 /* libPods-TestTickerLocalDb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTickerLocalDb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85566BC92B0717D80079CE70 /* TestTickerLocalDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTickerLocalDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85566BCC2B0717D80079CE70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85566BCE2B0717D80079CE70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,13 @@
 		85566BD52B0717DA0079CE70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85566BD82B0717DA0079CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85566BDA2B0717DA0079CE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85837E412B0718F400111CAC /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		85837E432B07190F00111CAC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		85837E452B07195D00111CAC /* LocalDbConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbConfig.swift; sourceTree = "<group>"; };
+		85837E472B07198B00111CAC /* LocalDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDbManager.swift; sourceTree = "<group>"; };
+		85837E492B0719DA00111CAC /* migrations_v001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = migrations_v001.swift; sourceTree = "<group>"; };
+		CF45A6C7D8EC24CD29609D2B /* Pods-TestTickerLocalDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTickerLocalDb.release.xcconfig"; path = "Target Support Files/Pods-TestTickerLocalDb/Pods-TestTickerLocalDb.release.xcconfig"; sourceTree = "<group>"; };
+		FA6FD228176A06D0D5FF84C6 /* Pods-TestTickerLocalDb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTickerLocalDb.debug.xcconfig"; path = "Target Support Files/Pods-TestTickerLocalDb/Pods-TestTickerLocalDb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9E8562B1243E0BDA778C7A /* libPods-TestTickerLocalDb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				85566BCB2B0717D80079CE70 /* TestTickerLocalDb */,
 				85566BCA2B0717D80079CE70 /* Products */,
+				DD5166C229F5FDA639247E1A /* Pods */,
+				CB1970609415F91B1E1743D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		85566BCB2B0717D80079CE70 /* TestTickerLocalDb */ = {
 			isa = PBXGroup;
 			children = (
+				85837E402B0718D600111CAC /* Entities */,
 				85566BCC2B0717D80079CE70 /* AppDelegate.swift */,
 				85566BCE2B0717D80079CE70 /* SceneDelegate.swift */,
 				85566BD02B0717D80079CE70 /* ViewController.swift */,
@@ -63,8 +81,37 @@
 				85566BD52B0717DA0079CE70 /* Assets.xcassets */,
 				85566BD72B0717DA0079CE70 /* LaunchScreen.storyboard */,
 				85566BDA2B0717DA0079CE70 /* Info.plist */,
+				85837E452B07195D00111CAC /* LocalDbConfig.swift */,
+				85837E472B07198B00111CAC /* LocalDbManager.swift */,
+				85837E492B0719DA00111CAC /* migrations_v001.swift */,
 			);
 			path = TestTickerLocalDb;
+			sourceTree = "<group>";
+		};
+		85837E402B0718D600111CAC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				85837E412B0718F400111CAC /* Author.swift */,
+				85837E432B07190F00111CAC /* Book.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CB1970609415F91B1E1743D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407E423B2A5E0AD33F175726 /* libPods-TestTickerLocalDb.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD5166C229F5FDA639247E1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA6FD228176A06D0D5FF84C6 /* Pods-TestTickerLocalDb.debug.xcconfig */,
+				CF45A6C7D8EC24CD29609D2B /* Pods-TestTickerLocalDb.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +121,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85566BDD2B0717DA0079CE70 /* Build configuration list for PBXNativeTarget "TestTickerLocalDb" */;
 			buildPhases = (
+				C7E768AA796F3DF361CF3F3C /* [CP] Check Pods Manifest.lock */,
 				85566BC52B0717D80079CE70 /* Sources */,
 				85566BC62B0717D80079CE70 /* Frameworks */,
 				85566BC72B0717D80079CE70 /* Resources */,
@@ -133,13 +181,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C7E768AA796F3DF361CF3F3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTickerLocalDb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85566BC52B0717D80079CE70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				85566BD12B0717D80079CE70 /* ViewController.swift in Sources */,
+				85837E462B07195D00111CAC /* LocalDbConfig.swift in Sources */,
 				85566BCD2B0717D80079CE70 /* AppDelegate.swift in Sources */,
+				85837E4A2B0719DA00111CAC /* migrations_v001.swift in Sources */,
+				85837E422B0718F400111CAC /* Author.swift in Sources */,
+				85837E442B07190F00111CAC /* Book.swift in Sources */,
+				85837E482B07198B00111CAC /* LocalDbManager.swift in Sources */,
 				85566BCF2B0717D80079CE70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +360,7 @@
 		};
 		85566BDE2B0717DA0079CE70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6FD228176A06D0D5FF84C6 /* Pods-TestTickerLocalDb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +389,7 @@
 		};
 		85566BDF2B0717DA0079CE70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF45A6C7D8EC24CD29609D2B /* Pods-TestTickerLocalDb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

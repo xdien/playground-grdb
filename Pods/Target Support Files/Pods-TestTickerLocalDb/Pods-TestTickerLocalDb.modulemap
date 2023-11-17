@@ -1,0 +1,6 @@
+module Pods_TestTickerLocalDb {
+  umbrella header "Pods-TestTickerLocalDb-umbrella.h"
+
+  export *
+  module * { export * }
+}
