@@ -18,11 +18,11 @@ public class LocalDbManager {
 
     var version = "v0.0.1"
 
-    func read<T>(callback: ((Database) throws -> T)) throws -> T {
+    func read<T>(callback: (Database) throws -> T) throws -> T {
         try dbQueue.read(callback)
     }
 
-    func write<T>(callback: ((Database) throws -> T)) throws -> T {
+    func write<T>(callback: (Database) throws -> T) throws -> T {
         try dbQueue.write(callback)
     }
 
@@ -30,7 +30,13 @@ public class LocalDbManager {
         migrator.registerMigration(version, migrate: migrations_v001)
 
         do {
-            try dbQueue = DatabaseQueue(path: LocalDbConfig.shared.sqlitePath)
+            var config = Configuration()
+            config.prepareDatabase { db in
+                // The expandedDescription shows all values
+                db.trace { print($0.expandedDescription) }
+            }
+            try dbQueue = DatabaseQueue(path: LocalDbConfig.shared.sqlitePath, configuration: config)
+
             try dbPool = DatabasePool(path: LocalDbConfig.shared.sqlitePath)
             try migrate()
         } catch {

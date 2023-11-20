@@ -5,8 +5,8 @@
 //  Created by xdien on 17/11/2023.
 //
 
-import UIKit
 import GRDB
+import UIKit
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -15,32 +15,42 @@ class ViewController: UIViewController {
         do {
             try LocalDbManager.shared.write { db in
                 // TODO: sample record
-                var authorInfo = AuthorInfo(author: Author(id: 1, name: "John Doe"), books: [
-                    Book(id: 1, title: "Book 1", authorId: 1),
-                    Book(id: 2, title: "Book 2", authorId: 1),
-                    Book(id: 3, title: "Book 3", authorId: 1),
-                ])
-                try authorInfo.upsert(db)
+                try Chat(id: 1, name: "channel 1").insert(db)
+                    try Chat(id: 2, name: "channel 2" ).insert(db)
+                    try Chat(id: 3, name: "channel 3").insert(db)
+                    try Chat(id: 4, name: "channel 4").insert(db)
+                    
+                    try Message(id: 1, chatID: 1, date: Date(timeIntervalSince1970: 0), text: "message 0").insert(db)
+                    try Message(id: 2, chatID: 1, date: Date(timeIntervalSince1970: 2), text: "message 2").insert(db) // latest
+                    try Message(id: 3, chatID: 1, date: Date(timeIntervalSince1970: 1), text: "message 1").insert(db)
+                    
+                    try Message(id: 4, chatID: 2, date: Date(timeIntervalSince1970: 1), text: "message 1").insert(db)
+                    try Message(id: 5, chatID: 2, date: Date(timeIntervalSince1970: 0), text: "message 0").insert(db)
+                    try Message(id: 6, chatID: 2, date: Date(timeIntervalSince1970: 2), text: "message 2").insert(db) // latest
+                    
+                    try Message(id: 7, chatID: 3, date: Date(timeIntervalSince1970: 1), text: "message 1").insert(db) // latest
             }
         } catch {
             print(error)
         }
     }
+    
+    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         do {
-            try LocalDbManager.shared.read { db in
-                // Lấy tất cả danh sách sách của tác giả John Doe
+            let chatInfos: [AuthorInfo]? = try LocalDbManager.shared.dbQueue.read { db in
                 let request = Author
-                        .including(all: Author.books)
-                        .asRequest(of: AuthorInfo.self)
-                    let authorInfos = try request.fetchAll(db)
-                    for authorInfo in authorInfos {
-                        print("\(authorInfo.author.name) wrote \(authorInfo.books.count) books")
-                    }
+                    .including(all: Author.books)
+                    .asRequest(of: AuthorInfo.self)
+                let aaa = try request.fetchAll(db)
+                print(aaa.map({ $0.books.count }))
+                return aaa
             }
+
         } catch {
-            print(error)
+            print("error \(error)")
         }
     }
 }
